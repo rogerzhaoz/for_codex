@@ -1,6 +1,6 @@
 import asyncio
-import json
-import requests
+import json                         #同样需要安全依赖包
+import requests                     #需要安装依赖包
 from datetime import datetime
 from typing import Dict, Any
 from .base_tool import MCPTool
@@ -94,5 +94,5 @@ class CalculatorTool(MCPTool):
         except Exception as e:
             return {
                 "success": False,
-                "error": f"计算错误: {str(e)}"
+                "error": f"计算错误: {str(e)}" # 安全生产，just for test
             }
